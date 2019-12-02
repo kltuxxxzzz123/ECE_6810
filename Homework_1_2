@@ -1,0 +1,29 @@
+% Homework 1_2
+% Problem 6
+% Ping-Ju, Lin
+% Created 9/17/2019
+function homework1_2
+
+% Generate 1024-points while Gaussian random noise w, 
+% with zero mean and unit variance
+w = randn(1024,1);
+plot(w);
+pause;
+
+% Generate the 1024-points signal x of two sinusoids with noise (function 1)
+x = zeros(1024,1);
+for n = 1:1024
+    x(n) = cos(0.1*pi*n) + 0.2*sin(0.12*pi*n) +0.2*w(n);
+end    
+plot(x);
+pause;
+
+% Generate the 1024-points signal x of two sinusoids with noise (function 2)
+X = zeros(1024,1);
+for n = 1:1024
+    X(n) = cos(0.1*pi*n) + 0.2*sin(0.12*pi*n) +0.2*w(n);
+end    
+plot(X);
+pause;
+
+end
